@@ -12,4 +12,8 @@ env:
   - CMD=fbjs:flow
   - CMD=preset:test
   - CMD=signedsource:test
+matrix:
+  exclude:
+  - os: linux-ppc64le
+    env: CMD=fbjs:flow
 script: yarn run $CMD
